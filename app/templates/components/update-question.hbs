@@ -1,0 +1,16 @@
+<form>
+  <div class="form-group">
+    <label for="content">Edit question:</label>
+    {{input value=content id='content'}}
+  </div>
+  <div class="form-group">
+    <label for="author">Edit name:</label>
+    {{input value=author id='author'}}
+  </div>
+  <div class="form-group">
+    <label for="note">Edit notes:</label>
+    {{input value=note id='note'}}
+  </div>
+  <button type="button" {{action 'update' question}}>Update</button>
+</form>
+<button type="button" {{action 'delete' question}}>Delete this question</button>
