@@ -1,13 +1,13 @@
 <h4>All the questions and answers</h4>
 
-<!-- <div class="well">
-  {{#each model as |question|}}
+<div class="well">
+  {{#each model.questions as |question|}}
     {{question-tile question=question}}
   {{/each}}
-</div> -->
+</div>
 
-<!-- {{new-question saveQuestion='saveQuestion'}}
+{{new-question saveQuestion='saveQuestion'}}
 
 {{#each model.answers as |answer|}}
-  <li>answer.content</li>
-{{/each}} -->
+  <li>{{answer.content}}</li>
+{{/each}}
