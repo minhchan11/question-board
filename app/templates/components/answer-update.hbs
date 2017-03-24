@@ -1,0 +1,12 @@
+<form>
+  <div class="form-group">
+    <label for="responseUpdate">Edit answer:</label>
+    {{input value=responseUpdate id='responseUpdate'}}
+  </div>
+  <div class="form-group">
+    <label for="responderUpdate">Edit author:</label>
+    {{input value=responderUpdate id='responderUpdate'}}
+  </div>
+  <button type="button" {{action 'updateAns' answer}}>Update</button>
+</form>
+<button type="button" {{action 'deleteAns' answer}}>Delete this answer</button>

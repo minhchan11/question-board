@@ -15,7 +15,12 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     delete(question){
-      question.destroyRecord();
+      var deletedAnswers = question.get('answers').map(function(review) {
+        return review.destroyRecord();
+      });
+      Ember.RSVP.all(deletedAnswers).then(function(){
+        question.destroyRecord();
+      });
       this.transitionTo('index');
     },
     saveAnswer(params){
@@ -26,6 +31,17 @@ export default Ember.Route.extend({
         return thisQuestion.save();
       });
       this.transitionTo('question', thisQuestion);
+    },
+    updateAns(answer, params){
+      Object.keys(params).forEach(function(key){
+        if(params[key] !== undefined){
+          answer.set(key, params[key]);
+        }
+      });
+      answer.save();
+    },
+    deleteAns(answer) {
+      answer.destroyRecord();
     }
   }
 });

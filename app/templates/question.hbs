@@ -2,7 +2,7 @@
 <h4>By: {{model.author}}</h4>
 <h6>{{model.note}}</h6>
 {{#each model.answers as |answer|}}
-{{answer-tile answer=answer}}
+{{answer-tile answer=answer updateAns='updateAns' deleteAns='deleteAns'}}
 {{/each}}
 {{update-question question=model update='update' delete='delete'}}
 {{new-answer saveAnswer="saveAnswer" question=model}}
