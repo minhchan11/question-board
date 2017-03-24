@@ -1,16 +1,17 @@
 <form>
   <div class="form-group">
     <label for="content">Edit question:</label>
-    {{input value=content id='content'}}
+    {{input value=content id='content' class="form-control"}}
   </div>
   <div class="form-group">
     <label for="author">Edit name:</label>
-    {{input value=author id='author'}}
+    {{input value=author id='author' class="form-control"}}
   </div>
   <div class="form-group">
     <label for="note">Edit notes:</label>
-    {{input value=note id='note'}}
+    {{input value=note id='note' class="form-control"}}
   </div>
-  <button type="button" {{action 'update' question}}>Update</button>
+  <button type="button" {{action 'update' question}} class="btn btn-info btn-md">Update</button>
 </form>
-<button type="button" {{action 'delete' question}}>Delete this question</button>
+<br>
+<button type="button" {{action 'delete' question}} class="btn btn-danger btn-md">Delete this question</button>

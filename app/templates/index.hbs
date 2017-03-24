@@ -1,11 +1,19 @@
-<h4>All the questions and answers</h4>
+<h4 class="jumbotron header">Question Board</h4>
 
 <div class="well">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Question</h4>
+    </div>
+    <div class="col-md-6">
+      <h4>Author</h4>
+    </div>
+  </div>
   {{#each model.questions as |question|}}
-    {{question-tile question=question}}
+  {{question-tile question=question}}
   {{/each}}
 </div>
 
 {{new-question saveQuestion='saveQuestion'}}
 
-<button {{action 'clear'}}>Clear All</button>
+<button class="hidden" {{action 'clear'}}>Clear All</button>

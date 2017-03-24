@@ -1,11 +1,11 @@
 <form>
   <div class="form-group">
     <label for="response">Answer:</label>
-    {{input value=response id='response'}}
+    {{input value=response id='response' class="form-control"}}
   </div>
   <div class="form-group">
     <label for="responder">Your name:</label>
-    {{input value=responder id='responder'}}
+    {{input value=responder id='responder' class="form-control"}}
   </div>
-  <button type="button" {{action 'saveAnswer'}}>Submit</button>
+  <button type="button" {{action 'saveAnswer'}} class="btn btn-md btn-secondary">Submit</button>
 </form>

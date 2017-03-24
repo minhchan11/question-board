@@ -1,15 +1,32 @@
-<form>
-  <div class="form-group">
-    <label for="content">Ask new question:</label>
-    {{input value=content id='content'}}
-  </div>
-  <div class="form-group">
-    <label for="author">Your name:</label>
-    {{input value=author id='author'}}
-  </div>
-  <div class="form-group">
-    <label for="note">Additional notes:</label>
-    {{input value=note id='note'}}
-  </div>
-  <button type="button" {{action 'saveQuestion'}}>Submit</button>
-</form>
+
+<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#newForm">Submit new question</button>
+
+<div class="modal fade" id="newForm" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Post a new question to the board</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="content">Ask new question:</label>
+              {{input value=content id='content' class="form-control"}}
+            </div>
+            <div class="form-group">
+              <label for="author">Your name:</label>
+              {{input value=author id='author' class="form-control"}}
+            </div>
+            <div class="form-group">
+              <label for="note">Additional notes:</label>
+              {{input value=note id='note' class="form-control"}}
+            </div>
+            <button type="button" class= "btn btn-info" {{action 'saveQuestion'}} data-dismiss="modal">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      </div>
+      </div>

@@ -1,6 +1,8 @@
-<ul>
-  <li>{{#link-to 'question' question.id}}{{question.content}}{{/link-to}}</li>
-    <ul>
-      <li>By: {{question.author}}</li>
-    </ul>
-</ul>
+<div class="panel row">
+  <div class="col-md-6">
+    {{#link-to 'question' question.id}}{{question.content}}{{/link-to}}
+  </div>
+  <div class="col-md-6">
+    by {{question.author}}
+  </div>
+</div>

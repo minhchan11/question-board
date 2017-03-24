@@ -1,4 +1,9 @@
-<ol>
-  <li>{{answer.response}} by {{answer.responder}}</li>
-</ol>
+<div class="panel panel-warning">
+  <div class="panel-heading">{{answer.responder}} said:</div>
+  <div class="panel-body">
+    <blockquote>
+        {{answer.response}}
+    </blockquote>
 {{answer-update answer=answer updateAns='updateAns' deleteAns='deleteAns'}}
+</div>
+</div>

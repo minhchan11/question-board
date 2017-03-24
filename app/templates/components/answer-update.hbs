@@ -1,12 +1,19 @@
+{{#if formShow}}
 <form>
   <div class="form-group">
     <label for="responseUpdate">Edit answer:</label>
-    {{input value=responseUpdate id='responseUpdate'}}
+    {{input value=responseUpdate id='responseUpdate' class="form-control"}}
   </div>
   <div class="form-group">
     <label for="responderUpdate">Edit author:</label>
-    {{input value=responderUpdate id='responderUpdate'}}
+    {{input value=responderUpdate id='responderUpdate' class="form-control" }}
   </div>
-  <button type="button" {{action 'updateAns' answer}}>Update</button>
+  <button type="button" {{action 'updateAns' answer}} class="btn btn-sm btn-primary">Update</button>
+  <button type="button" {{action 'hideForm'}} class="btn btn-sm btn-secondary">Cancel</button>
 </form>
-<button type="button" {{action 'deleteAns' answer}}>Delete this answer</button>
+<br>
+<button type="button" {{action 'deleteAns' answer}} class="btn btn-sm btn-danger">Delete this answer</button>
+
+{{else}}
+<button type="button" {{action 'showForm'}} class="btn btn-sm btn-success">Modify this answer</button>
+{{/if}}

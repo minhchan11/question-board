@@ -1,0 +1,12 @@
+.container {
+  font-family: 'Raleway', sans-serif;
+}
+
+.header{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 100px;
+}
+.space{
+  padding-left: 20px;
+}

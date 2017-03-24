@@ -1,10 +1,41 @@
-<h3>{{model.content}}</h3>
-<h4>By: {{model.author}}</h4>
-<h6>{{model.note}}</h6>
+<div class="well">
+  <h2>{{model.content}}</h2>
+  <h3>By: {{model.author}}</h3>
+  <h4>{{model.note}}</h4>
+</div>
 {{#each model.answers as |answer|}}
 {{answer-tile answer=answer updateAns='updateAns' deleteAns='deleteAns'}}
 {{/each}}
-{{update-question question=model update='update' delete='delete'}}
-{{new-answer saveAnswer="saveAnswer" question=model}}
+
+
+<div class="container">
+  <h2>Responses</h2>
+  <div class="panel-group">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Answer this question</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+          {{new-answer saveAnswer="saveAnswer" question=model}}
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Edit this question</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          {{update-question question=model update='update' delete='delete'}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{#link-to 'index'}}Home{{/link-to}}
