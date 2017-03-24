@@ -8,7 +8,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         note: this.get('note')
       };
-      this.sendAction('saveQuestion', params)
+      this.sendAction('saveQuestion', params);
     }
   }
 });
