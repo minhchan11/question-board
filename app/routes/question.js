@@ -18,14 +18,14 @@ export default Ember.Route.extend({
       question.destroyRecord();
       this.transitionTo('index');
     },
-    saveAnswer(){
-      var newAnswer = this.store.createRecord('answer');
-      var question = params.question;
-      question.get('answers').addObject(newAnswer);
+    saveAnswer(params){
+      var newAnswer = this.store.createRecord('answer', params);
+      var thisQuestion = params.question;
+      thisQuestion.get('answers').addObject(newAnswer);
       newAnswer.save().then(function(){
-        return question.save();
+        return thisQuestion.save();
       });
-      this.transitionTo('question', question)
+      this.transitionTo('index')
     }
   }
 });

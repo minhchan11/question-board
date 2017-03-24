@@ -1,7 +1,7 @@
 <h3>{{model.content}}</h3>
 <h4>By: {{model.author}}</h4>
 <h6>{{model.note}}</h6>
-
+{{answer-tile model.answers = answer}}
 {{update-question question=model update='update' delete='delete'}}
 {{new-answer saveAnswer="saveAnswer" question=model}}
 

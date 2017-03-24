@@ -18,16 +18,16 @@
   ],
   "answers": [
     {
-      "content": "just be awesome",
-      "author": "Lee"
+      "response": "just be awesome",
+      "responder": "Lee"
     },
     {
-      "content": "just be pretty",
-      "author": "Kate"
+      "response": "just be pretty",
+      "responder": "Kate"
     },
     {
-      "content": "just be awesome",
-      "author": "Mike"
+      "response": "just be awesome",
+      "responder": "Mike"
     }
   ]
 }
