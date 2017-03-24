@@ -1,0 +1,33 @@
+{
+  "questions": [
+    {
+      "content": "How to be smart?",
+      "author": "Jim",
+      "note": "I really want to be smart"
+    },
+    {
+      "content": "How to be pretty?",
+      "author": "Mary",
+      "note": "I really want to be pretty"
+    },
+    {
+      "content": "How to be awesome?",
+      "author": "James",
+      "note": "I really want to be awesome"
+    }
+  ],
+  "answers": [
+    {
+      "content": "just be awesome",
+      "author": "Lee"
+    },
+    {
+      "content": "just be pretty",
+      "author": "Kate"
+    },
+    {
+      "content": "just be awesome",
+      "author": "Mike"
+    }
+  ]
+}
