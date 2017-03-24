@@ -7,3 +7,7 @@
 </div>
 
 {{new-question saveQuestion='saveQuestion'}}
+
+{{#each model.answers as |answer|}}
+  <li>answer.content</li>
+{{/each}}
