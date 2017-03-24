@@ -1,1 +1,9 @@
-{{outlet}}
+<h4>All the questions and answers</h4>
+
+<div class="well">
+  {{#each model.questions as |question|}}
+    {{question-tile question=question update="update" delete="delete"}}
+  {{/each}}
+</div>
+
+{{new-question saveQuestion='saveQuestion'}}
